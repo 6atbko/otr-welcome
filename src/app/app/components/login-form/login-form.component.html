@@ -1,0 +1,31 @@
+<div class="login-wrapper">
+    <div class="login-form">
+        <form action="" class="form" [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+            <div class="login-form__content">
+                <div class="login-field">
+                    <label for="login-input" class="field__label">Логин</label>
+                    <input id="login-input" class="field__input" type="text" formControlName="login" />
+                    <div class="field__errors" *ngIf="loginFormGroup.get('login')?.invalid">
+                        <div *ngFor="let error of loginErrors">
+                            {{error}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="login-field">
+                    <label for="password-input" class="field__label">Пароль</label>
+                    <input id="password-input" class="field__input" type="password" formControlName="password" />
+                    <div class="field__errors" *ngIf="loginFormGroup.get('password')?.invalid">
+                        <div *ngFor="let error of passwordErrors">
+                            {{error}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="login-form__footer">
+                <button class="form__submit" type="submit">Войти</button>
+            </footer>
+        </form>
+    </div>
+</div>

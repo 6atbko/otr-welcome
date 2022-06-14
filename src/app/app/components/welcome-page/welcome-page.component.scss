@@ -1,0 +1,14 @@
+.welcome-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .welcome-title,
+    .welcome-logout {
+        font-size: 24px;
+    }
+    .welcome-title {
+        margin-bottom: 20px;
+    }
+}
